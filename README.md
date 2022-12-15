@@ -7,23 +7,23 @@ This project is distinct by its functionality compare to all other projects, whe
 As stated above, Chatroom is a Discord like application that allows registered users to create open/private rooms to chat with others. The application fetches data automatically in a set interval to update the front end for all logged in users to see, allowing a fast pase exchange of information. 
 
 ## files:
-the file structures are exactly the same as all previous projects. The files below are the ones with most amount of changes
-url.py handles the routing of apis and the visible pages through URLs
-views.py works together with url.py to handle api requests and update database. It also renders the correct html pages based on url
-models.py defines the structure and parameters of our database
+the file structures are exactly the same as all previous projects. The files below are the ones with most amount of changes.
+url.py handles the routing of apis and the visible pages through URLs.
+views.py works together with url.py to handle api requests and update database. It also renders the correct html pages based on url.
+models.py defines the structure and parameters of our database.
 script.js takes care of all frontend functionalities, communicates with views.py (via url.py) to format and display html code by fetching necessary data in json and updates the database.
-style.css has all styling on the application
-layout.html contains the header for the other pages
-index.html is the home page of the application
-room_page.html is the chatroom page 
+style.css has all styling on the application.
+layout.html contains the header for the other pages.
+index.html is the home page of the application.
+room_page.html is the chatroom page .
 
 ## How to run the application:
-The same as all the project before
-first cd chatroom to get to the file directory
-then python manage.py makemigrations project
-then python manage.py migrate
-lastly python manage.py runserver
-If you want to manually make change or modify the existing data run python manage.py createsuperuser to make admin account, don't forget to modify admin.py accordingly
+The same as all the project before.
+first cd chatroom to get to the file directory.
+then python manage.py makemigrations project.
+then python manage.py migrate.
+lastly python manage.py runserver.
+If you want to manually make change or modify the existing data run python manage.py createsuperuser to make admin account, don't forget to modify admin.py accordingly.
 
 ## Additional info/author note:
 When you login and joins a room, make sure to click leave room to to completely remove it. otherwise the room will keep you in the list forever. If you are the room owner, and you leave a room, the owner then is assigned automatically to the next person. 
