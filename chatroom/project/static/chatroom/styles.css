@@ -1,0 +1,199 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(53, 53, 53);
+    color: rgb(187, 187, 187);
+    font-family: "Lucida Console", "Courier New", monospace;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (prefers-color-scheme: light) {
+    body {
+        background-color: white;
+        color: black;
+    }
+}
+
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(31, 31, 31);
+    color: white;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
+.navbar-links li:hover {
+    background-color: #555;
+}
+
+.toggle-button {
+    position: absolute;
+    top: 1.3rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+#not_logged_in {
+    padding: 250px 16px 16px 16px;
+    text-align: center;
+}
+
+.inputs {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 500px;
+    padding: 4px;
+}
+
+.rooms {
+    margin-top: 24px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 500px;
+    padding: 4px;
+    background-color: rgb(26, 26, 26);
+    border-radius: 15px;
+    padding: 16px;
+    box-shadow: 1px 3px 8px rgb(220, 220, 220);
+}
+
+.joinBTN {
+    border: none;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+#new_message {
+    position: absolute;
+    z-index: 1;
+    background-color: rgb(31, 31, 31);
+    bottom: 0px;
+    width: 100vw;
+    padding: 8px;
+}
+
+.exBTN {
+    width: 100vw;
+    margin-top: 8px;
+    display: flex;
+    flex-direction: row;
+    right: 0px;
+}
+
+.ex2BTN {
+    display: flex;
+    justify-content: right;
+    margin-right: 16px;
+    margin-left: auto;
+
+}
+
+#names {
+    color: white;
+    background-color: #555;
+    overflow-x: scroll;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.kickBTN {
+    border-radius: 10px;
+    border-style: none;
+    margin-left: 4px;
+    color: white;
+    background-color: rgb(139, 30, 30);
+}
+
+#room_page {
+    position: absolute;
+    width: 100vw;
+    bottom: 140px;
+    top: 104px;
+    overflow: scroll;
+    z-index: -1;
+}
+
+.message {
+    margin: 0 8px;
+}

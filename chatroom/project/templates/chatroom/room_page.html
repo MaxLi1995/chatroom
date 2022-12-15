@@ -1,0 +1,24 @@
+{% extends "chatroom/layout.html" %}
+{% load static %}
+
+{% block body %}
+{% if user.is_authenticated %}
+<div id="room">
+    <div id="room_members">
+
+    </div>
+    <div id="room_page">
+
+    </div>
+    <div id="room_control">
+
+    </div>
+</div>
+<div id="error"></div>
+{% endif %}
+
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'chatroom/script.js' %}"></script>
+{% endblock %}

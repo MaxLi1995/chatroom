@@ -1,0 +1,33 @@
+{% extends "chatroom/layout.html" %}
+{% load static %}
+
+{% block body %}
+{% if user.is_authenticated %}
+<form style="margin-top:12px;">
+    {% csrf_token %}
+    <div id="error" style="text-align:center;margin-bottom: 6px ;"></div>
+    <div class="form-group inputs">
+        <input class="form-control" autofocus type="text" id="room_name" name="room_name" placeholder="Room Name">
+    </div>
+    <div class="form-group inputs">
+        <input class="form-control" type="password" id="password" name="password" placeholder="Password">
+    </div>
+    </div>
+    <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; width: 100vw;">
+        <button class="btn btn-primary" style="margin:8px;" type="button" value="Create!"
+            onclick="create_room()">Create!</button>
+        <button class="btn btn-primary" style="margin:8px;" type="button" value="Join!"
+            onclick="join_room()">Join!</button>
+    </div>
+    <div id="error"></div>
+    <div id="open_rooms"></div>
+</form>
+{% else %}
+<h3 id="not_logged_in">Please log in or register to enter a chatroom!</h3>
+{% endif %}
+
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'chatroom/script.js' %}"></script>
+{% endblock %}
