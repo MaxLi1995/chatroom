@@ -167,6 +167,15 @@ body {
 
 }
 
+#names::-webkit-scrollbar {
+  display: none;
+}
+
+#names {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 #names {
     color: white;
     background-color: #555;
@@ -185,13 +194,23 @@ body {
     background-color: rgb(139, 30, 30);
 }
 
+#room_page::-webkit-scrollbar {
+  display: none;
+}
+
 #room_page {
-    position: absolute;
-    width: 100vw;
-    bottom: 140px;
-    top: 104px;
-    overflow: scroll;
-    z-index: -1;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#room_page {
+  position: absolute;
+  width: 100vw;
+  bottom: 0px;
+  overflow: scroll;
+  z-index: -1;
+  top: 104px;
+  bottom: 140px;
 }
 
 .message {
