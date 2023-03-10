@@ -1,5 +1,7 @@
 # CAPSTONE final project: 'Chatroom' Written description
 
+video Demo: https://youtu.be/KMILQPNEtic
+
 ## Distinctiveness and Complexity: 
 This project is distinct by its functionality compare to all other projects, where the user can enter/host multiple rooms to chat in with many other users. The application fetches and updates from the backend constantly so the users will see their and other messages as fast as possible. The most similar project in concept to this one is project 4 'social network'. However, project 4 has the limitation where the information are only updated from user actions, thus limits the speed of which users can exchange information. In addition, project 4 has no privacy freedom as your posts are seen by everybody, where as chatroom allows the creation of private rooms as well as the ability for the room host to control who can be in the room. 
 
